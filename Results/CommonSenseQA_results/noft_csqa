@@ -1,0 +1,24 @@
+Random seed set as 101
+Token will not been saved to git credential helper. Pass `add_to_git_credential=True` if you want to set the git credential as well.
+Token is valid.
+Your token has been saved to /home/behzad/.cache/huggingface/token
+Login successful
+Loading checkpoint shards:   0%|          | 0/7 [00:00<?, ?it/s]Loading checkpoint shards:  14%|█▍        | 1/7 [00:01<00:10,  1.74s/it]Loading checkpoint shards:  29%|██▊       | 2/7 [00:03<00:07,  1.46s/it]Loading checkpoint shards:  43%|████▎     | 3/7 [00:04<00:05,  1.37s/it]Loading checkpoint shards:  57%|█████▋    | 4/7 [00:05<00:03,  1.33s/it]Loading checkpoint shards:  71%|███████▏  | 5/7 [00:06<00:02,  1.30s/it]Loading checkpoint shards:  86%|████████▌ | 6/7 [00:08<00:01,  1.28s/it]Loading checkpoint shards: 100%|██████████| 7/7 [00:09<00:00,  1.22s/it]Loading checkpoint shards: 100%|██████████| 7/7 [00:09<00:00,  1.30s/it]
+trainable params: 16777216 || all params: 3517190144 || trainable%: 0.477006226934315
+dataset leaded
+/home/behzad/finetune/noft_csqa.py:108: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_test['full_question_test'][myrow] = f"{df_test['question'][myrow]} (A) {df_test['A'][myrow]} (B) {df_test['B'][myrow]} (C) {df_test['C'][myrow]} (D) {df_test['D'][myrow]} "
+/home/behzad/.local/lib/python3.10/site-packages/transformers/generation/utils.py:1270: UserWarning: You have modified the pretrained model configuration to control generation. This is a deprecated strategy to control generation and will be removed soon, in a future version. Please use a generation configuration file (see https://huggingface.co/docs/transformers/main_classes/text_generation )
+  warnings.warn(
+2023-12-29 13:21:09.428925: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-12-29 13:21:09.463757: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-12-29 13:21:09.975167: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/home/behzad/finetune/noft_csqa.py:221: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_test['res_finetuned'][myrow]= inference(df_test["full_question_test"][myrow], model, tokenizer)
